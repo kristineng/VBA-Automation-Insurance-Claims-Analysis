@@ -76,7 +76,7 @@ This variable allows claim amounts to be analyzed using categorical severity lev
 
 ---
 
-# 📈 Claims Analysis
+#  Claims Analysis
 After cleaning and validating the data, the project analyzes claim characteristics and claim amounts.
 The analysis includes:
 
@@ -125,7 +125,7 @@ The derived claim severity variable is used to examine the distribution of claim
 
 ---
 
-# 👤 Customer & Policy Analysis
+#  Customer & Policy Analysis
 The project also examines claim behavior at the customer level.
 The analysis includes:
 - Total number of customers
@@ -136,7 +136,7 @@ This provides an additional perspective beyond claim-level analysis by examining
 
 ---
 
-# 📅 Time Analysis
+#  Time Analysis
 Claim dates are used to analyze changes in claim activity over time.
 The analysis includes:
 - Claims by year
@@ -149,7 +149,7 @@ This allows changes in claim frequency and financial exposure to be compared acr
 
 ---
 
-# 🚨 Fraud Analysis
+#  Fraud Analysis
 Fraudulent and non-fraudulent claims are analyzed separately.
 The fraud analysis includes:
 - Number of fraudulent claims
