@@ -17,7 +17,7 @@ The dataset contains claim-level insurance observations. The main variables incl
 
 ---
 
-# 🔄 Data Preparation & Cleaning
+#  Data Preparation & Cleaning
 The project follows a structured workflow to preserve the original data while creating a separate cleaned dataset.
 ### Project workflow
 
