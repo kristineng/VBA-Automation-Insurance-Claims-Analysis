@@ -13,18 +13,7 @@ A VBA-based workflow was developed to automate repetitive data preparation and a
 # 📊 Dataset
 The dataset contains claim-level insurance observations. The main variables include:
 
-| Variable | Description |
-|---|---|
-| `claim_id` | Unique claim identifier |
-| `customer_id` | Customer identifier |
-| `incident_cause` | Cause associated with the incident |
-| `claim_date` | Date of the claim |
-| `claim_area` | Area associated with the claim |
-| `police_report` | Police report indicator |
-| `claim_type` | Type of insurance claim |
-| `claim_amount` | Monetary amount of the claim |
-| `total_policy_claims` | Number of claims associated with the policy |
-| `fraudulent` | Fraud indicator |
+ `claim_id`, `customer_id`, `incident_cause`, `claim_date`, `claim_area`, `police_report`, `claim_type`, `claim_amount`, `total_policy_claims`, `fraudulent` 
 
 ---
 
@@ -42,7 +31,7 @@ Instead, a separate `Clean_Data` worksheet is created for processing. This allow
 
 ### Raw data structure
 
-![Raw Data](docs/raw_data.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/raw_data.png)
 
 ---
 
@@ -68,7 +57,7 @@ For example, claim amounts originally stored with currency symbols such as: `$2,
 Rather than automatically deleting problematic records, the project records data-quality issues and preserves the observations for further review. A `data_quality_flag` variable was created to identify records requiring attention.
 A separate `Data_Quality` worksheet summarizes the number of records affected by each type of issue.
 
-![Data Quality](docs/data_quality.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/data_quality.png)
 
 This approach avoids treating missing financial information as zero and makes the data-quality process transparent.
 
@@ -102,28 +91,22 @@ The analysis includes:
 
 ## Claims by Claim Type
 Claims are grouped by claim type to compare both claim frequency and total claim amount.
-The analysis provides:
 
-| Claim Type | Claims | Amount |
-|---|---:|---:|
-| ... | ... | ... |
-
-![Claims by Claim Type](docs/claims_by_type.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/claim_type.png)
 
 ---
 
 ## Claims by Incident Cause
-Claims are also analyzed according to the underlying incident cause.
-This allows differences in claim frequency and claim amounts across incident causes to be examined.
+Claims are also analyzed according to the underlying incident cause. This allows differences in claim frequency and claim amounts across incident causes to be examined.
 
-![Claims by Incident Cause](docs/claims_by_cause.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/incident_cause.png)
 
 ---
 
 ## Claims by Area
 The dataset is grouped by claim area to compare claim frequency and financial exposure across different areas.
 
-![Claims by Area](docs/claims_by_area.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/area.png)
 
 ---
 
@@ -131,14 +114,14 @@ The dataset is grouped by claim area to compare claim frequency and financial ex
 
 Claims are analyzed according to the police report indicator. Both the number of claims and associated claim amounts are compared.
 
-![Claims by Police Report](docs/claims_by_police_report.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/police_report.png)
 
 ---
 
 ## Claims by Severity
 The derived claim severity variable is used to examine the distribution of claims across severity categories.
 
-![Claims by Severity](docs/claims_by_severity.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/4dd804cab047efcf9263968b37d476b7f1af48fc/images/severity.png)
 
 ---
 
@@ -160,7 +143,7 @@ The analysis includes:
 - Total claim amount by year
 - Average claim amount by year
 
-![Time Analysis](docs/time_analysis.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/053dfaf983068339163ea0ef7734957ffcb2a05e/images/time_analysis.png)
 
 This allows changes in claim frequency and financial exposure to be compared across different periods.
 
@@ -177,7 +160,7 @@ The fraud analysis includes:
 
 The comparison considers both claim frequency and claim amount.
 
-![Fraud Analysis](docs/fraud_analysis.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/053dfaf983068339163ea0ef7734957ffcb2a05e/images/fraud_analysis.png)
 
 ---
 
@@ -193,7 +176,7 @@ The dashboard includes key performance indicators and visualizations covering:
 - Time trends
 - Other portfolio-level measures
 
-![Insurance Claims Dashboard](docs/dashboard.png)
+![image alt](https://github.com/kristineng/VBA-Automation-Insurance-Claims-Analysis/blob/053dfaf983068339163ea0ef7734957ffcb2a05e/images/dashboard_vba.png)
 
 The dashboard is designed to provide a high-level view of the insurance claims portfolio while allowing the underlying analysis to be traced back to the `Analysis` worksheet.
 
@@ -228,28 +211,4 @@ The VBA workflow reduces the need to manually repeat the same calculations when 
 
 ---
 
-# 🔄 Workflow
-
-The complete project workflow can be summarized as:
-
-```text
-Raw Insurance Claims Data
-          ↓
-     Raw_Data
-          ↓
-    VBA Cleaning
-          ↓
-      Clean_Data
-          ↓
- Data Quality Validation
-          ↓
- Derived Variables
-          ↓
-      Analysis
-          ↓
- ┌────────┬────────┬────────┐
- ↓        ↓        ↓        ↓
-Claims   Fraud   Customer   Time
-Analysis Analysis Analysis Analysis
-          ↓
-       Dashboard
+Thank you!
